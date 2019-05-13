@@ -33,14 +33,3 @@
   gedUrl: ""
   options:
     crypted: true
-#
-# "api_picourt_ilsduc_fr":
-#   driver: "mysql"
-#   host: "database"
-#   dbname: "D2C_PC"
-#   user: "root"
-#   pwd: "password"
-#   appOwner: "codcli"
-#   gedUrl: "https://ged.picourt.ilsduc.fr/Dropxbox/PC/D2C_PC"
-#   options:
-#     crypted: true

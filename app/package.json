@@ -95,7 +95,6 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.4.4",
-    "@babel-polyfill": "^6.0.16",
     "babel-loader": "^8.0.5",
     "chalk": "^2.4.2",
     "concurrently": "^4.1.0",
