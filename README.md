@@ -38,7 +38,11 @@ npm run start
 
 Or run the two parts seperatly
 * API server
-``` cd api && docker-compose up -d  // run API server ```
+```
+cd api && docker-compose up -d  // run API server
+```
 
 * Development express server
-``` cd app && npm run start  // run ExpressJS server ```
+```
+cd app && npm run start  // run ExpressJS server
+```
