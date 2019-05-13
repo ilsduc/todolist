@@ -1,0 +1,11 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "My App",
+  "repository": "",
+  "scripts": {
+    "init-project": "cd app && npm install",
+    "start": "cd ./api && docker-compose up -d && cd ../app && npm run start"
+  }
+}
