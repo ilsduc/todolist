@@ -28,21 +28,17 @@ Run the following command in root folder
 npm run init-project
 ```
 
-Or run the two parts seperatly
-Api server:
-* ``` cd api && docker-compose up -d  // run API server ```
-Express server:
-* ``` cd app && npm run start  // run ExpressJS server ```
-### Installing
+### Run
 
-Then run the project
+Then run
 
 ```
 npm run start
 ```
 
 Or run the two parts seperatly
-Api server:
-* ``` cd api && docker-compose up -d  // run API server ```
-Express server:
-* ``` cd app && npm run start  // run ExpressJS server ```
+* API server
+``` cd api && docker-compose up -d  // run API server ```
+
+* Development express server
+``` cd app && npm run start  // run ExpressJS server ```
