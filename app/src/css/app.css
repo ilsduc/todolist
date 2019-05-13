@@ -1,0 +1,25 @@
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* Custom color theme properties */
+:root {
+  --f7-theme-color: #ca28c9;
+  --f7-theme-color-rgb: 94, 184, 0;
+  --f7-theme-color-shade: #498f00;
+  --f7-theme-color-tint: #73e100;
+}
+
+.list-menu-popover {
+  width: auto !important;
+}
+
+code {
+  background: rgb(200, 200, 200);
+  color: darkRed;
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+}
+
+/* Your app custom styles here */

@@ -1,0 +1,121 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "My App",
+  "repository": "",
+  "license": "UNLICENSED",
+  "framework7": {
+    "cwd": "/home/ilsduc/projects/todolist",
+    "type": [
+      "cordova"
+    ],
+    "name": "My App",
+    "framework": "react",
+    "template": "tabs",
+    "bundler": "webpack",
+    "cssPreProcessor": false,
+    "theming": {
+      "customColor": true,
+      "color": "#5eb800",
+      "darkTheme": false,
+      "iconFonts": true,
+      "fillBars": false
+    },
+    "customBuild": false,
+    "webpack": {
+      "developmentSourceMap": true,
+      "productionSourceMap": true,
+      "hashAssets": false,
+      "preserveAssetsPaths": false,
+      "inlineAssets": true
+    },
+    "pkg": "io.framework7.myapp",
+    "cordova": {
+      "folder": "cordova",
+      "platforms": [
+        "ios",
+        "android",
+        "electron"
+      ],
+      "plugins": [
+        "cordova-plugin-statusbar",
+        "cordova-plugin-keyboard",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-wkwebview-engine"
+      ]
+    }
+  },
+  "scripts": {
+    "build-dev": "cross-env NODE_ENV=development node ./build/build.js",
+    "build-prod": "cross-env NODE_ENV=production node ./build/build.js",
+    "build-cordova-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build",
+    "build-cordova-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build",
+    "build-cordova-ios-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build ios",
+    "build-cordova-ios-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build ios",
+    "build-cordova-android-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build android",
+    "build-cordova-android-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build android",
+    "build-cordova-electron-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build electron",
+    "build-cordova-electron-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build electron",
+    "cordova-electron": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && concurrently --kill-others \"cross-env TARGET=cordova cross-env ELECTRON_WATCH=true cross-env NODE_ENV=development cross-env webpack --progress --config ./build/webpack.config.js --watch\" \"cd cordova && cordova run electron --nobuild\"",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.js",
+    "start": "npm run dev",
+    "postinstall": "cpy './node_modules/framework7-icons/fonts/*.*' './src/fonts/'"
+  },
+  "browserslist": [
+    "Android >= 5",
+    "IOS >= 9.3",
+    "Edge >= 15",
+    "Safari >= 9.1",
+    "Chrome >= 49",
+    "Firefox >= 31",
+    "Samsung >= 5"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "dom7": "^2.1.3",
+    "framework7": "^4.3.1",
+    "framework7-icons": "^2.3.1",
+    "framework7-react": "^4.3.1",
+    "prop-types": "^15.7.2",
+    "qs": "^6.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.2",
+    "redux-thunk": "^2.3.0",
+    "template7": "^1.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.4",
+    "@babel-polyfill": "^6.0.16",
+    "babel-loader": "^8.0.5",
+    "chalk": "^2.4.2",
+    "concurrently": "^4.1.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "cpy-cli": "^2.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "ora": "^3.4.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
