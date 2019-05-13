@@ -1,0 +1,41 @@
+doc:get-users:
+  description: List of users.
+  returns:
+    users: array
+doc:post-user:
+  description: Create a user.
+  returns:
+    user: object
+doc:put-user:
+  description: Update a user.
+  returns:
+    user: object
+doc:get-user:
+  description: Get a user with id.
+  returns:
+    user: object
+doc:delete-user:
+  description: Delete a user with id.
+  returns:
+    user: object
+
+doc:get-todos:
+  description: List of todos.
+  returns:
+    todos: array
+doc:post-todo:
+  description: Create a todo.
+  returns:
+    todo: object
+doc:put-todo:
+  description: Update a todo.
+  returns:
+    todo: object
+doc:get-todo:
+  description: Get a todo with id.
+  returns:
+    todo: object
+doc:delete-todo:
+  description: Delete a todo with id.
+  returns:
+    todo: object

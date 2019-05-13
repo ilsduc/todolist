@@ -1,0 +1,31 @@
+## Example for a user
+User:
+  structure:
+    id: '{"type": "string", "length": "40", "default": "notnull", "primary": "true"}'
+    firstname: '{"type": "string", "length": "255", "default": "notnull"}'
+    lastname: '{"type": "string", "length": "255", "default": "notnull"}'
+    username: '{"type": "string", "length": "255", "default": "notnull"}'
+    email: '{"type": "string", "length": "255", "default": "notnull"}'
+    password: '{"type": "string", "length": "60", "default": "notnull"}'
+    role: '{"type": "int", "length": "11", "default": "notnull"}'
+    status: '{"type": "int", "length": "11", "default": "notnull"}'
+  keyColumn: id
+  uniqueColumns:
+    - email
+    - username
+  requiredFields:
+    - username
+    - lastname
+    - firstname
+    - email
+    - password
+## Example for a user
+Todo:
+  keyColumn: id
+  uniqueColumns:
+    - content
+  requiredFields:
+    - content
+
+#  relations:
+#   hasMany: commandes

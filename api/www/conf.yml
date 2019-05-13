@@ -1,0 +1,46 @@
+#####################
+### conf.yml file ###
+#####################
+### Define configuration database for the application
+#
+#
+#   driver: "database_driver"
+#   host: "database_host"
+#   dbname: "database_name"
+#   user: "user_able_to_connect_to_the_database"
+#   pwd: "user_password"
+#   appOwner: "owner_application" should be the user in most of time.
+#   options:
+#     crypted: true   // set to true if the data in URL must be crypted (numcde, codfou ...)
+
+## Note that the owner should be the name of MySQL column in other table
+## The owner permit to verify access permission when trying to access data.
+
+####### EXEMPLE #########
+# table1: user(id, name, email, pwd)
+# table2 commandes(id, idUser, date)
+### In this case, even if the user is identified by his 'id', the owner would be: 'idUser'
+### All ressources that belong to a user should have a table column named 'idUser' to guarantee integrity access
+
+#localhost parameters
+"localhost":
+  driver: "mysql"
+  host: "api_database"
+  dbname: "api"
+  user: "root"
+  pwd: "password"
+  appOwner: "codcli"
+  gedUrl: ""
+  options:
+    crypted: true
+#
+# "api_picourt_ilsduc_fr":
+#   driver: "mysql"
+#   host: "database"
+#   dbname: "D2C_PC"
+#   user: "root"
+#   pwd: "password"
+#   appOwner: "codcli"
+#   gedUrl: "https://ged.picourt.ilsduc.fr/Dropxbox/PC/D2C_PC"
+#   options:
+#     crypted: true

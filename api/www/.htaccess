@@ -1,0 +1,13 @@
+# Active the URL rewriting
+RewriteEngine On
+
+# Says that the base is the rootfolder
+RewriteBase /
+
+# Says that the URL RewriteRule take effects if the request doesn't match
+# an existing file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Apply the rewriting rule --> redirect to index.php
+RewriteRule ^(.*)$ index.php [L,QSA]

@@ -1,0 +1,137 @@
+.card-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0; */
+}
+
+nav.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 54px;
+}
+main {
+  padding-top: 54px;
+}
+.card-header.post, .badge.post {
+  background: forestGreen;
+  color: white;
+}
+.post .card-body {
+  background: rgba(34, 139, 34, .15);
+}
+.card-header.put, .badge.put {
+  background: goldenRod;
+  color: white;
+}
+.put .card-body{
+  background: rgba(218, 165, 32, .15);
+}
+.card-header.get, .badge.get {
+  background: dodgerBlue;
+  color: white;
+}
+.get .card-body {
+  background: rgba(30, 144, 254, .15);
+}
+.card-header.delete, .badge.delete {
+  background: fireBrick;
+  color: white;
+}
+.delete .card-body {
+  background: rgba(178, 34, 34, .15);
+}
+.tester-answer {
+  background: lemonchiffon;
+  color: grey;
+  border: 1px solid palegoldenrod;
+  border-radius: .3rem;
+  color: black;
+  padding: 1rem;
+}
+
+.description, .required, .returns {
+  background: lemonchiffon;
+  color: grey;
+  border: 1px solid palegoldenrod;
+  border-radius: .3rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.description:last-child, .required:last-child, .returns:last-child, pre {
+  margin-bottom: 0;
+}
+
+.title {
+  font-style: italic;
+}
+
+.modal-model-name {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.post:hover, .get:hover, .put:hover, .delete:hover {
+  opacity: 0.8;
+  transition: all ease .5s;
+}
+
+.header-doc-endpoint .endpoint {
+  font-size: 1.2rem;
+}
+.header-doc-endpoint:hover {
+  opacity: .8;
+  transition: all ease .3s;
+}
+
+.show-structure {
+  cursor: pointer;
+}
+
+.transform {
+  opacity: 0;
+  transition: all ease .3s;
+}
+.transform.show {
+  animation: fromRight .6s;
+  opacity: 1;
+}
+
+@keyframes fromRight {
+  from { transform: translateY(250%); }
+  to { transform: translateY(0); }
+}
+
+.navbar-side {
+  position: fixed;
+  top: 4.5rem;
+  left: 3rem;
+  min-width: 50px;
+}
+.navbar-side ul {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .3rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.navbar-side ul li {
+  padding: 0;
+  margin: 0;
+}
+.navbar-side ul li a {
+  padding: .5rem 1rem;
+  display: block;
+}
+.navbar-side ul li a:hover {
+  text-decoration: none;
+  background: rgba(0,0,0,.125);
+}
+
+@media screen and (max-width: 775px) {
+  .navbar-side {
+    display: none;
+  }
+}

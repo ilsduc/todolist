@@ -1,0 +1,39 @@
+#
+/documentation:
+  controller: Server
+  action: documentation
+
+/documentation/change-token:
+  controller: Server
+  post:
+    action: changeToken
+
+/documentation/create-schema:
+  controller: Server
+  get:
+    action: createSchema
+
+### POPUPLATIONS
+/todos:
+  controller: Todo
+  get:
+    action: get
+    doc: doc:get:todos
+  post:
+    action: post
+    doc: doc:post:todo
+
+/todos/:id:
+  controller: Todo
+  get:
+    action: get
+    doc: doc:get:todo
+  patch:
+    action: patch
+    doc: doc:patch:todo
+  put:
+    action: put
+    doc: doc:put:todo
+  delete:
+    action: delete
+    doc: doc:delete:todo

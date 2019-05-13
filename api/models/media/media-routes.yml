@@ -1,0 +1,5 @@
+"post":
+# simply upload in root pathFolder
+  "/files/upload":
+    controller: FileLoader
+    action: upload
