@@ -51,3 +51,9 @@ cd app && npm run start
 Go to ```http://localhost:4000/documentation/create-schema```. It will create the schema and redirect to http://localhost/documentation. And you should see todos endpoints.
 
 API is reacheable under http://localhost:4000 and the application under http://localhost:8080.
+
+### Unmount project
+
+```
+npm run stop
+```

@@ -6,6 +6,7 @@
   "repository": "",
   "scripts": {
     "init-project": "cd app && npm install",
-    "start": "cd ./api && docker-compose up -d && cd ../app && npm run start"
+    "start": "cd ./api && docker-compose up -d && cd ../app && npm run start",
+    "stop": "cd ./api && docker-compose down"
   }
 }
