@@ -46,3 +46,8 @@ cd api && docker-compose up -d
 ```
 cd app && npm run start
 ```
+### Create the database
+
+Go to ```http://localhost:4000/documentation``` and click "create schema" button.
+
+API is reacheable under http://localhost:4000 and the application under http://localhost:8080
